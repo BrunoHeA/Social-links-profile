@@ -1,0 +1,110 @@
+@use './abstract/variaveis';
+@use './abstract/reset';
+
+body {
+    background: variaveis.$cor-preto;
+    font-family: variaveis.$ft-primaria;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo {
+    background-color: variaveis.$cor-cinza-escuro;
+    width: 30vw;
+    height: 80vh;
+    margin: 0 auto;
+    border-radius: 2rem;
+
+    .cima {
+        height: 40%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            height: 40%;
+            width: auto;
+            border-radius: 50%;
+            margin: 2rem 0 1rem 0;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        &-local {
+            color: variaveis.$cor-primaria;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        &-descricao {
+            margin: .5rem 0 0 0 ;
+        }
+    }
+
+    .baixo {
+        height: 60%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+            color: white;
+            text-decoration: none;
+            background-color: variaveis.$cor-cinza;
+            text-align: center;
+            width: 85%;
+            padding: 1.2rem 0;
+            border-radius: .6rem;
+            font-weight: 600;
+
+            &:nth-child(5) {
+                margin-bottom: 5%;
+            }
+        }
+
+        a:hover {
+            color: black;
+            background-color: variaveis.$cor-primaria;
+        }
+    }
+}
+
+@media(max-width: 1150px) {
+
+    .conteudo {
+        width: 65vw;
+
+        .cima {
+            height: 45%;
+        }
+
+        .baixo {
+            height: 55%;
+        }
+    }
+
+}
+
+@media(max-width: 700px) {
+
+    .conteudo {
+        width: 85vw;
+
+        .cima {
+            height: 45%;
+        }
+
+        .baixo {
+            height: 55%;
+        }
+    }
+
+}
